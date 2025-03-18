@@ -8,8 +8,15 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
-	}
+		adapter: adapter(),
+		alias: {
+			$lib: "./src/lib/*",
+			$src: "./src/*",
+		},
+		csp: {
+			directives: {}
+		}
+	},
 };
 
 export default config;
